@@ -1,0 +1,474 @@
+@charset "UTF-8";
+* {
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.heart-icone {
+  padding-right: 25px;
+  font-size: 25px;
+}
+
+@-webkit-keyframes page {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes page {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes starters-article {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+}
+
+@keyframes starters-article {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+}
+
+@-webkit-keyframes selected-icon {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes selected-icon {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes loading-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 1;
+  }
+  85% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes loading-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 1;
+  }
+  85% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#loading-spinner {
+  border: 10px solid #E1E3E0;
+  border-top: 10px solid #9356dc;
+  border-bottom: 10px solid #ff79da;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-animation: loading-spinner 1s linear;
+  animation: loading-spinner 1s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#page {
+  -webkit-animation-name: page;
+          animation-name: page;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+/*HEADER*/
+#logo {
+  /*Fleche de revenir en arriere des autres pages*/
+}
+
+#logo .arrow-go-back {
+  font-size: 20px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+#logo :first-child {
+  color: black;
+}
+
+#logo h1 {
+  padding-top: 10px;
+  font-family: "Shrikhand", cursive;
+  color: black;
+  text-align: center;
+}
+
+#search-bar {
+  text-align: center;
+  background-color: #CED1CB;
+}
+
+#search-bar i {
+  margin-right: 10px;
+}
+
+#search-bar input {
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: #CED1CB;
+  padding: 10px 0 10px 0;
+  outline: none;
+}
+
+#presentation {
+  background-color: #E1E3E0;
+  padding-top: 25px;
+}
+
+#presentation h2 {
+  margin: auto;
+  width: 70%;
+  text-align: center;
+  font-weight: 900;
+}
+
+#presentation p {
+  padding: 10px 0 20px 0;
+  font-weight: 300;
+  margin: auto;
+  width: 80%;
+  text-align: center;
+}
+
+#presentation #presentation-button {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+#presentation #presentation-button a {
+  border-radius: 30px;
+  padding: 14px 0 14px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.425) 0px 10px 10px;
+          box-shadow: rgba(0, 0, 0, 0.425) 0px 10px 10px;
+}
+
+#presentation #presentation-button a:active {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.678) 0px 10px 10px;
+          box-shadow: rgba(0, 0, 0, 0.678) 0px 10px 10px;
+}
+
+#presentation #presentation-button a button {
+  border-radius: 30px;
+  padding: 15px;
+  color: white;
+  border: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+}
+
+#presentation #presentation-button a button:active {
+  opacity: 0.7;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms;
+}
+
+#site-operation {
+  padding: 15px 15px 30px 15px;
+}
+
+#site-operation h2 {
+  margin: 30px 0 10px 0;
+  font-weight: 900;
+}
+
+#site-operation li {
+  font-weight: 500;
+  background-color: #E1E3E0;
+  border-radius: 15px;
+  padding: 20px 20px 20px 0;
+  margin-bottom: 20px;
+  -webkit-box-shadow: silver 2px 2px 2px;
+          box-shadow: silver 2px 2px 2px;
+}
+
+#site-operation li span {
+  background-color: #9356dc;
+  border-radius: 50%;
+  padding: 5px 10px 5px 10px;
+  margin-left: -10px;
+  color: white;
+}
+
+#site-operation li .operation-icons {
+  margin: 0 20px 0 20px;
+  color: #737171;
+}
+
+#restaurants-section {
+  background-color: #E1E3E0;
+  padding-bottom: 40px;
+}
+
+#restaurants-section h2 {
+  padding-top: 40px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  font-weight: 900;
+}
+
+#restaurants-section #restaurants-article {
+  margin: 0 15px 15px 15px;
+}
+
+#restaurants-section #restaurants-article a {
+  color: black;
+}
+
+#restaurants-section #restaurants-article img {
+  border-radius: 15px 15px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 160px;
+}
+
+#restaurants-section #restaurants-article .restaurants-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+  margin-top: -2px;
+  padding: 10px 0 15px 15px;
+  border-radius: 0 0 15px 15px;
+}
+
+#restaurants-section #restaurants-article h3 {
+  font-weight: 900;
+}
+
+#restaurants-section #restaurants-article p {
+  font-weight: 300;
+}
+
+#restaurants-section #restaurants-article .hearts {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+#restaurants-section #restaurants-article .hearts .heart-icone-empty {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+}
+
+#restaurants-section #restaurants-article .hearts .heart-icone-colored {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+  font-size: 30px;
+  opacity: 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#restaurants-section #restaurants-article .hearts:active > .heart-icone-colored {
+  opacity: 1;
+  -webkit-transition: opacity 250ms linear;
+  transition: opacity 250ms linear;
+}
+
+#footer {
+  background-color: #2D2A2A;
+  color: white;
+  padding: 0 0 15px 15px;
+  line-height: 25px;
+  font-weight: 500;
+}
+
+#footer a {
+  color: white;
+  font-size: 16px;
+}
+
+#footer a p {
+  padding: 10px 0 10px 0;
+  font-family: "Shrikhand", cursive;
+}
+
+#footer .footer-icons {
+  margin-right: 10px;
+  width: 20px;
+  font-size: 13px;
+}
+
+/***************************************/
+/*Restaurant 1 - La palette du goût  PAGE*/
+#content-restaurants-pages img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin-bottom: -100px;
+}
+
+#content-restaurants-pages #menu {
+  position: relative;
+  z-index: 2;
+  background-color: #E1E3E0;
+  border-radius: 30px 30px 0 0;
+}
+
+#content-restaurants-pages #menu #title-restaurants {
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 20px;
+}
+
+#content-restaurants-pages #menu #title-restaurants h2 {
+  padding-left: 20px;
+  font-family: "Shrikhand", cursive;
+  margin-right: 40px;
+}
+
+#content-restaurants-pages #menu #title-restaurants .heart-icone-menu {
+  font-size: 25px;
+}
+
+#content-restaurants-pages #menu #menu-content {
+  padding: 0 15px 0 15px;
+}
+
+#content-restaurants-pages #menu #menu-content h3 {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+
+#content-restaurants-pages #menu #menu-content h3 span {
+  border-bottom: 3px #99E2D0 solid;
+}
+
+#content-restaurants-pages #menu #menu-content #starters-section {
+  padding-bottom: 20px;
+}
+
+#content-restaurants-pages #menu #menu-content #starters-section .starters-article {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  -webkit-animation: starters-article 1000ms;
+          animation: starters-article 1000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#content-restaurants-pages #menu #menu-content #starters-section .starters-article:nth-child(1) {
+  -webkit-animation-delay: 150ms;
+          animation-delay: 150ms;
+}
+
+#content-restaurants-pages #menu #menu-content #starters-section .starters-article:nth-child(2) {
+  -webkit-animation-delay: 250ms;
+          animation-delay: 250ms;
+}
+
+#content-restaurants-pages #menu #menu-content #starters-section .starters-article:nth-child(3) {
+  -webkit-animation-delay: 350ms;
+          animation-delay: 350ms;
+}
+
+#content-restaurants-pages #menu #menu-content #starters-section .starters-article .starters-description-container .starters-description {
+  padding: 10px 0 10px 10px;
+}
+
+#content-restaurants-pages #menu #menu-content #starters-section .starters-article .starters-description-container .starters-description:active > .selected-icon {
+  -webkit-animation-name: selected-icon 1000ms;
+          animation-name: selected-icon 1000ms;
+}
+
+#content-restaurants-pages #menu #menu-content #starters-section .starters-article .starters-description-container .starters-description h4 {
+  font-weight: 700;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+#content-restaurants-pages #menu #menu-content #starters-section .starters-article .starters-description-container .starters-description .phrase-menu {
+  margin-right: 5px;
+  padding-bottom: 10px;
+  font-weight: 100;
+  font-size: 14px;
+}
+
+#content-restaurants-pages #menu #menu-content #starters-section .starters-article .starters-description-container .starters-description .price {
+  font-weight: 900;
+  font-size: 14px;
+  margin-left: 280px;
+  margin-top: -30px;
+}
+/*# sourceMappingURL=style.css.map */

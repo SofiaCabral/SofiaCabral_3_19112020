@@ -1,0 +1,14 @@
+les boutons doivent s'eclaircir au survol
+
+
+
+
+une propriété CSS à modifier ; background
+
+une valeur initiale pour votre propriété CSS ; background: linear-gradient($secondary-color, $primary-color);
+
+une valeur finale pour cette même propriété ; AA7CE1 FFA7E7
+
+une durée ; 1s22222222222222222222222222
+
+un événement pour déclencher votre transition. hover
