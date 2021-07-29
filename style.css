@@ -127,21 +127,26 @@
           box-shadow: rgba(0, 0, 0, 0.425) 0px 10px 10px;
 }
 
-#presentation-button a:active {
+#presentation-button a:hover, #presentation-button a:active {
   -webkit-box-shadow: rgba(0, 0, 0, 0.678) 0px 10px 10px;
           box-shadow: rgba(0, 0, 0, 0.678) 0px 10px 10px;
 }
 
-#presentation-button a button {
+#presentation-button a p {
   border-radius: 30px;
   padding: 15px;
+  text-decoration: none;
   color: white;
   border: none;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(#ff79da, #9356dc);
+  font-weight: 300;
+  margin: auto;
+  width: 200px;
+  text-align: center;
 }
 
-#presentation-button a button:active {
+#presentation-button a p:hover, #presentation-button a p:active {
   opacity: 0.7;
   -webkit-transition: opacity 300ms;
   transition: opacity 300ms;
@@ -164,7 +169,8 @@
 }
 
 #logo h1 {
-  padding-top: 10px;
+  padding-top: 15px;
+  padding-bottom: 10px;
   font-family: "Shrikhand", cursive;
   color: black;
   text-align: center;
@@ -173,6 +179,7 @@
 #search-bar {
   text-align: center;
   background-color: #CED1CB;
+  padding: 10px;
 }
 
 #search-bar i {
@@ -189,6 +196,7 @@
 }
 
 #presentation {
+  padding-top: 30px;
   background-color: #E1E3E0;
 }
 
@@ -390,75 +398,84 @@
   padding: 0 15px 30px 15px;
 }
 
-#content-restaurants-pages #menu .starters-section h3 {
+#content-restaurants-pages #menu .starters-section #starters-section-container h3 {
   margin-top: 30px;
   text-transform: uppercase;
   margin-bottom: 15px;
   font-weight: 300;
+  position: relative;
+  padding-bottom: 10px;
 }
 
-#content-restaurants-pages #menu .starters-section h3 span {
-  border-bottom: 3px #99E2D0 solid;
+#content-restaurants-pages #menu .starters-section #starters-section-container h3::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
-#content-restaurants-pages #menu .starters-section .starters-article {
+#content-restaurants-pages #menu .starters-section #starters-section-container .starters-article {
   background-color: white;
-  padding: 15px;
+  padding: 15px 35px 15px 15px;
   margin-bottom: 10px;
   border-radius: 15px;
-  -webkit-animation: starters-article 1000ms;
-          animation: starters-article 1000ms;
+  -webkit-animation: starters-article 1s;
+          animation: starters-article 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   position: relative;
   overflow: hidden;
 }
 
-#content-restaurants-pages #menu .starters-section .starters-article:nth-child(1) {
-  -webkit-animation-delay: 150ms;
-          animation-delay: 150ms;
-}
-
-#content-restaurants-pages #menu .starters-section .starters-article:nth-child(2) {
+#content-restaurants-pages #menu .starters-section #starters-section-container .starters-article:nth-child(1) {
   -webkit-animation-delay: 250ms;
           animation-delay: 250ms;
 }
 
-#content-restaurants-pages #menu .starters-section .starters-article:nth-child(3) {
+#content-restaurants-pages #menu .starters-section #starters-section-container .starters-article:nth-child(2) {
   -webkit-animation-delay: 350ms;
           animation-delay: 350ms;
 }
 
-#content-restaurants-pages #menu .starters-section .starters-article h4,
-#content-restaurants-pages #menu .starters-section .starters-article .phrase-menu {
+#content-restaurants-pages #menu .starters-section #starters-section-container .starters-article:nth-child(3) {
+  -webkit-animation-delay: 450ms;
+          animation-delay: 450ms;
+}
+
+#content-restaurants-pages #menu .starters-section #starters-section-container .starters-article h4,
+#content-restaurants-pages #menu .starters-section #starters-section-container .starters-article .phrase-menu {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   width: 93%;
 }
 
-#content-restaurants-pages #menu .starters-section .starters-article .price {
+#content-restaurants-pages #menu .starters-section #starters-section-container .starters-article .price {
   font-weight: 900;
   font-size: 14px;
   text-align: right;
-  margin-top: -30px;
+  margin-top: -27px;
+  margin-left: 10px;
   width: 100%;
 }
 
-#content-restaurants-pages #menu .starters-section .starters-article h4 {
+#content-restaurants-pages #menu .starters-section #starters-section-container .starters-article h4 {
   font-weight: 700;
   margin-bottom: 4px;
   font-size: 16px;
 }
 
-#content-restaurants-pages #menu .starters-section .starters-article .phrase-menu {
+#content-restaurants-pages #menu .starters-section #starters-section-container .starters-article .phrase-menu {
   margin-right: 5px;
   padding-bottom: 10px;
   font-weight: 100;
   font-size: 14px;
 }
 
-#content-restaurants-pages #menu .starters-section .starters-article .selected-icon {
+#content-restaurants-pages #menu .starters-section #starters-section-container .starters-article .selected-icon {
   position: absolute;
   right: -20%;
   top: 0;
@@ -479,7 +496,7 @@
   transition: right 0.5s linear;
 }
 
-#content-restaurants-pages #menu .starters-section .starters-article .selected-icon i {
+#content-restaurants-pages #menu .starters-section #starters-section-container .starters-article .selected-icon i {
   color: white;
   font-size: 20px;
   -webkit-transform: rotate(360deg);
@@ -490,24 +507,24 @@
   transition: transform 0.5s linear, -webkit-transform 0.5s linear;
 }
 
-#content-restaurants-pages #menu .starters-section .starters-article:hover .selected-icon, #content-restaurants-pages #menu .starters-section .starters-article:active .selected-icon {
+#content-restaurants-pages #menu .starters-section #starters-section-container .starters-article:hover .selected-icon, #content-restaurants-pages #menu .starters-section #starters-section-container .starters-article:active .selected-icon {
   right: 0;
 }
 
-#content-restaurants-pages #menu .starters-section .starters-article:hover .selected-icon i, #content-restaurants-pages #menu .starters-section .starters-article:active .selected-icon i {
+#content-restaurants-pages #menu .starters-section #starters-section-container .starters-article:hover .selected-icon i, #content-restaurants-pages #menu .starters-section #starters-section-container .starters-article:active .selected-icon i {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
 
-#content-restaurants-pages #menu .starters-section .starters-article:hover h4,
-#content-restaurants-pages #menu .starters-section .starters-article:hover .phrase-menu, #content-restaurants-pages #menu .starters-section .starters-article:active h4,
-#content-restaurants-pages #menu .starters-section .starters-article:active .phrase-menu {
+#content-restaurants-pages #menu .starters-section #starters-section-container .starters-article:hover h4,
+#content-restaurants-pages #menu .starters-section #starters-section-container .starters-article:hover .phrase-menu, #content-restaurants-pages #menu .starters-section #starters-section-container .starters-article:active h4,
+#content-restaurants-pages #menu .starters-section #starters-section-container .starters-article:active .phrase-menu {
   -webkit-transition: width 0.5s linear;
   transition: width 0.5s linear;
   width: 68%;
 }
 
-#content-restaurants-pages #menu .starters-section .starters-article:hover .price, #content-restaurants-pages #menu .starters-section .starters-article:active .price {
+#content-restaurants-pages #menu .starters-section #starters-section-container .starters-article:hover .price, #content-restaurants-pages #menu .starters-section #starters-section-container .starters-article:active .price {
   -webkit-transition: width 0.5s linear;
   transition: width 0.5s linear;
   width: 75%;
@@ -545,6 +562,32 @@
   }
   #restaurants-section .restaurants-article img {
     width: 100%;
+  }
+  #content-restaurants-pages img {
+    height: 500px;
+  }
+  #title-restaurants {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #starters-section-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #starters-section-container h3 {
+    width: 100%;
+  }
+  #starters-section-container .starters-section-elements {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #starters-section-container .starters-article {
+    width: 80%;
   }
 }
 /*# sourceMappingURL=style.css.map */
