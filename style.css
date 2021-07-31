@@ -575,7 +575,7 @@
   }
   #title-restaurants {
     margin: auto;
-    width: 50%;
+    width: 43%;
   }
 }
 
@@ -590,27 +590,6 @@
   }
   #site-operation ol li {
     width: 30%;
-  }
-  #restaurants-section {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  #restaurants-section h2 {
-    margin: auto;
-    width: 90%;
-    margin-bottom: 40px;
-  }
-  #restaurants-section .restaurants-article {
-    width: 40%;
-    margin-bottom: 40px;
-  }
-  #restaurants-section .restaurants-article img {
-    width: 100%;
   }
   #restaurants-section {
     display: -webkit-box;
@@ -657,9 +636,6 @@
   }
   #starters-section-container .starters-article {
     width: 80%;
-  }
-  #content-restaurants-pages img {
-    height: 400px;
   }
 }
 /*# sourceMappingURL=style.css.map */

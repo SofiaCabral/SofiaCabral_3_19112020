@@ -465,7 +465,7 @@
         }
         #title-restaurants {
             margin: auto;
-            width: 50%;
+            width: 43%;
         }
     }
     
@@ -476,23 +476,6 @@
                 justify-content: space-between;
                 li {
                     width: 30%;
-                }
-            }
-        }
-        #restaurants-section {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            h2 {
-                margin: auto;
-                width: 90%;
-                margin-bottom: 40px;
-            }
-            .restaurants-article {
-                width: 40%;
-                margin-bottom: 40px;
-                img {
-                    width: 100%;
                 }
             }
         }
@@ -534,12 +517,6 @@
             }
             .starters-article {
                 width: 80%;
-            }
-        }
-        //Page Menus
-        #content-restaurants-pages {
-            img {
-                height: 400px;
             }
         }
     }
