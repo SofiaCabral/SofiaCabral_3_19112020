@@ -11,7 +11,8 @@
     $light-grey: #f6f6f6;
     $white: white;
     $silver: silver;
-    $background-color-operation: rgba(138, 5, 138, 0.198);
+    $background-color-operation: #F7F1FF;
+    $background-color-operation-hover: #F5EDFF;
     * {
         list-style-type: none;
         text-decoration: none;
@@ -107,6 +108,11 @@
         animation-name: page;
         animation-duration: 3s;
         // max-width: 1500px;
+    }
+    
+    #main-content {
+        max-width: 1400px;
+        margin: 0 auto;
     }
     
     #presentation-button {
@@ -205,14 +211,14 @@
         }
         li {
             font-weight: 500;
-            background-color: $light-grey;
+            background-color: $background-color-operation;
             border-radius: 15px;
             padding: 20px 20px 20px 0;
             margin-bottom: 20px;
             box-shadow: $silver 2px 2px 2px;
             &:hover,
             a:active {
-                background-color: $background-color-operation;
+                background-color: $background-color-operation-hover;
             }
             span {
                 background-color: $primary-color;
@@ -258,7 +264,8 @@
                 border-radius: 0 0 15px 15px;
             }
             a {
-                flex: 9; //partager espace
+                flex: 9;
+                //partager espace
                 .restaurant-description-text {
                     h3 {
                         font-weight: 900;
@@ -270,8 +277,6 @@
                 }
             }
             .hearts {
-                flex: 1;
-                justify-self: flex-end;
                 width: 30px;
                 height: 30px;
                 margin-right: 20px;
@@ -385,6 +390,7 @@
                             overflow: hidden; //cacher ce le texte
                             white-space: nowrap; //pour ne pas passer à la ligne
                             width: 93%;
+                            transition: all 0.5s linear;
                         }
                         .price {
                             font-weight: 900;
@@ -393,6 +399,7 @@
                             margin-top: -27px;
                             margin-left: 10px;
                             width: 100%;
+                            transition: all 0.5s linear;
                         }
                         h4 {
                             font-weight: 700;
@@ -433,31 +440,12 @@
                                     transform: rotate(0deg);
                                 }
                             }
-                            // h4,
-                            // .phrase-menu {
-                            //     transition: width 0.5s linear;
-                            //     width: 68%;
-                            // }
-                            // .price {
-                            //     transition: width 0.5s linear;
-                            //     width: 75%;
-                            // }
-                            @keyframes priceAnimation {
-                                0% {
-                                    width: 100%;
-                                }
-                                50% {
-                                    width: 75%;
-                                }
-                                100% {
-                                    width: 75%;
-                                }
+                            h4,
+                            .phrase-menu {
+                                width: 68%;
                             }
                             .price {
-                                animation-name: priceAnimation;
-                                animation-duration: 1s;
-                                // animation-fill-mode: both;
-                                animation-timing-function: linear;
+                                width: 75%;
                             }
                         }
                     }

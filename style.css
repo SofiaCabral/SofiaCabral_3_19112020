@@ -143,6 +143,11 @@
           animation-duration: 3s;
 }
 
+#main-content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 #presentation-button {
   text-align: center;
   padding-bottom: 50px;
@@ -251,7 +256,7 @@
 
 #site-operation li {
   font-weight: 500;
-  background-color: #f6f6f6;
+  background-color: #F7F1FF;
   border-radius: 15px;
   padding: 20px 20px 20px 0;
   margin-bottom: 20px;
@@ -261,7 +266,7 @@
 
 #site-operation li:hover,
 #site-operation li a:active {
-  background-color: rgba(138, 5, 138, 0.198);
+  background-color: #F5EDFF;
 }
 
 #site-operation li span {
@@ -333,10 +338,6 @@
 }
 
 #restaurants-section .restaurants-article .hearts {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  justify-self: flex-end;
   width: 30px;
   height: 30px;
   margin-right: 20px;
@@ -475,6 +476,8 @@
   overflow: hidden;
   white-space: nowrap;
   width: 93%;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 
 #content-restaurants-pages #menu .starters-section #starters-section-container .starters-article .price {
@@ -484,6 +487,8 @@
   margin-top: -27px;
   margin-left: 10px;
   width: 100%;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 
 #content-restaurants-pages #menu .starters-section #starters-section-container .starters-article h4 {
@@ -540,37 +545,14 @@
           transform: rotate(0deg);
 }
 
-@-webkit-keyframes priceAnimation {
-  0% {
-    width: 100%;
-  }
-  50% {
-    width: 75%;
-  }
-  100% {
-    width: 75%;
-  }
-}
-
-@keyframes priceAnimation {
-  0% {
-    width: 100%;
-  }
-  50% {
-    width: 75%;
-  }
-  100% {
-    width: 75%;
-  }
+#content-restaurants-pages #menu .starters-section #starters-section-container .starters-article:hover h4,
+#content-restaurants-pages #menu .starters-section #starters-section-container .starters-article:hover .phrase-menu, #content-restaurants-pages #menu .starters-section #starters-section-container .starters-article:active h4,
+#content-restaurants-pages #menu .starters-section #starters-section-container .starters-article:active .phrase-menu {
+  width: 68%;
 }
 
 #content-restaurants-pages #menu .starters-section #starters-section-container .starters-article:hover .price, #content-restaurants-pages #menu .starters-section #starters-section-container .starters-article:active .price {
-  -webkit-animation-name: priceAnimation;
-          animation-name: priceAnimation;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  width: 75%;
 }
 
 @media all and (min-width: 760px) and (max-width: 1023px) {
