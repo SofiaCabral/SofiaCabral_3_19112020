@@ -11,6 +11,7 @@
     $light-grey: #f6f6f6;
     $white: white;
     $silver: silver;
+    $background-color-operation: rgba(138, 5, 138, 0.198);
     * {
         list-style-type: none;
         text-decoration: none;
@@ -50,21 +51,10 @@
     
     @keyframes page {
         0% {
-            opacity: (0);
+            opacity: 0;
         }
         100% {
             opacity: 1;
-        }
-    }
-    
-    @keyframes starters-article {
-        from {
-            opacity: 0;
-            transform: translateY(0);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(5px);
         }
     }
     
@@ -78,6 +68,17 @@
         }
         100% {
             opacity: 0;
+        }
+    }
+    
+    @keyframes starters-article {
+        from {
+            opacity: 0;
+            transform: translateY(0);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(5px);
         }
     }
     
@@ -105,6 +106,7 @@
     #page {
         animation-name: page;
         animation-duration: 3s;
+        // max-width: 1500px;
     }
     
     #presentation-button {
@@ -208,6 +210,10 @@
             padding: 20px 20px 20px 0;
             margin-bottom: 20px;
             box-shadow: $silver 2px 2px 2px;
+            &:hover,
+            a:active {
+                background-color: $background-color-operation;
+            }
             span {
                 background-color: $primary-color;
                 border-radius: 50%;
@@ -217,7 +223,7 @@
             }
             .operation-icons {
                 margin: 0 20px 0 20px;
-                color: #737171;
+                color: $primary-color;
             }
         }
     }
@@ -362,7 +368,6 @@
                         margin-bottom: 10px;
                         border-radius: 15px;
                         animation: starters-article 1s;
-                        animation-fill-mode: forwards;
                         position: relative;
                         overflow: hidden; //cacher l'icone
                         &:nth-child(1) {
@@ -428,14 +433,31 @@
                                     transform: rotate(0deg);
                                 }
                             }
-                            h4,
-                            .phrase-menu {
-                                transition: width 0.5s linear;
-                                width: 68%;
+                            // h4,
+                            // .phrase-menu {
+                            //     transition: width 0.5s linear;
+                            //     width: 68%;
+                            // }
+                            // .price {
+                            //     transition: width 0.5s linear;
+                            //     width: 75%;
+                            // }
+                            @keyframes priceAnimation {
+                                0% {
+                                    width: 100%;
+                                }
+                                50% {
+                                    width: 75%;
+                                }
+                                100% {
+                                    width: 75%;
+                                }
                             }
                             .price {
-                                transition: width 0.5s linear;
-                                width: 75%;
+                                animation-name: priceAnimation;
+                                animation-duration: 1s;
+                                // animation-fill-mode: both;
+                                animation-timing-function: linear;
                             }
                         }
                     }
